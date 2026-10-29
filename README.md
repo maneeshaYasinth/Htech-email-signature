@@ -9,14 +9,15 @@ A static, frontend-only page where team members sign in, fill in their details a
 
 ## Deploy
 
-1. Upload the `email/` folder so the images are public at `https://htechcore.com/email/` (for example `https://htechcore.com/email/hc-logo.png`).
-   To host them somewhere else, change `ASSET_BASE` in the `CONFIG` block near the top of the script in `index.html`.
-2. Host `index.html` on any static host over https (for example `sign.htechcore.com`). The passcode check needs https.
-3. Open the page, sign in, copy a signature and send yourself a test email before sharing the link with the team.
+The site is hosted on Vercel at https://mailing.htechcore.com. The Vercel project is linked to this repo, so every push to `main` redeploys it. There's no build step.
+
+- The images are served from `/email/` (for example `https://mailing.htechcore.com/email/hc-logo.png`). `ASSET_BASE` in the `CONFIG` block near the top of the script in `index.html` points there.
+- **Don't rename, move or delete anything in `email/`.** Every signature people have already sent loads these image URLs, and those emails can't be updated.
+- After a change, open the page, sign in, copy a signature and send yourself a test email.
 
 ## Change the team passcode
 
-The starter passcode is `hydrotech2026`. Change it before sharing:
+The passcode is shared with the team privately. To change it, hash the new one:
 
 ```
 # macOS
